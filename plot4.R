@@ -14,8 +14,8 @@ data$date_time <- strptime(paste(data$Date,data$Time),"%d/%m/%Y %H:%M:%S")
 ## Energy sub metering time series w/legend
 ## Global Reactive Power time series w/ x-axis label "date/time"
 ## 
-par(mfrow=c(2,2))
 png(filename = "plot4.png")
+par(mfrow=c(2,2))
 with(data, plot(x=date_time, y=Global_active_power,type="l",
                 xlab="", ylab="Global Active Power (kilowatts)"))
 with(data, plot(x=date_time, y=Voltage,type="l",
